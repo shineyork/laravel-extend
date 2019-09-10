@@ -10,18 +10,15 @@ trait GeneratorCommand{
     {
         return config('extend.artisan.package.namespace');
     }
-
     public function getPackagePath()
     {
         return config('extend.artisan.package.path');
     }
-
     protected function getPath($name)
     {
         $name = Str::replaceFirst($this->rootNamespace(), '', $name);
         return $this->getPackagePath().str_replace('/', '\\', $name).'.php';
     }
-
     protected function getArguments()
     {
         return [
@@ -29,12 +26,10 @@ trait GeneratorCommand{
             ['name', InputArgument::REQUIRED, 'The name of the class'],
         ];
     }
-
     protected function getPackageInput()
     {
         return str_replace('/', '\\', trim($this->argument('package')));
     }
-
     protected function getDefaultNamespace($rootNamespace)
     {
         return $rootNamespace.'\\'.$this->getPackageInput().$this->namespaceSuffix;

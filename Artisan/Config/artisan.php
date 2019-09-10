@@ -1,7 +1,7 @@
 <?php
 return [
     'package' => [
-        'namespace' => 'ShineYork\LaravelShop',
-        'path' => app()->basePath().'\vendor\shineyork\laravel-shop\src'
+        'namespace' => 'ShineYork\LaravelExtend',
+        'path' => app()->basePath().'\vendor\shineyork\laravel-extend'
     ]
 ];

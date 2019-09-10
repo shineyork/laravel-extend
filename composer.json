@@ -19,11 +19,12 @@
         }
     },
     "extra":{
-        "laravel":{
-            "providers":[
-                "ShineYork\\LaravelExtend\\Artisan\\ArtisanServiceProvider",
-                "ShineYork\\LaravelExtend\\Database\\Providers\\SDatabaseServiceProvider"
-            ]
-        }
-    }
+       "laravel":{
+           "providers":[
+               "ShineYork\\LaravelExtend\\Artisan\\ArtisanServiceProvider",
+               "ShineYork\\LaravelExtend\\Database\\Providers\\SDatabaseServiceProvider",
+               "ShineYork\\LaravelExtend\\Swoole\\SwooleServiceProvider"
+           ]
+       }
+     }
 }

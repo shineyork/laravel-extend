@@ -29,8 +29,8 @@ trait SEvents
     public static function observes($observes = null)
     {
         foreach ((empty($observes) ? config(config('extend.database.package-observer')) : $observes) as $model => $observe) {
-            $model = (new static)->checkModel($model);
-            $observe = (new static)->checkObserve($observe);
+            $model = static::checkModel($model);
+            $observe = static::checkObserve($observe);
             $model::observe($observe);
         }
     }
